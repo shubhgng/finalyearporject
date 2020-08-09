@@ -1,0 +1,79 @@
+Good Morning everyone, here is the simple system architectur and workflow
+of your model.
+the first step of our model is to collect the data.
+and for collecting data right now we are using yahoo finance.
+the reason for using yahoo api is because it is free.
+since the data we are collecting from yahoo is in form of DataFrame
+in order to convert this dataframe into a useable form we are using panda
+DataReader to convert this DataFrame into a cvs to and storing into a file
+
+
+
+The second step is preprocessing the data we have collected
+since the data we have collected might have noise like nan, or some row might be unfilled.
+Inorder to remove this noise we are using some feature engineering method.
+for example suppose that we have collected the height of 1000 person out of which
+some 50 person height is not available. so inorder order to fill height of these
+people we can calculate the average height of this 950 people and we will fill the gap
+
+the second option is to avoid the height of this 50 person, but in this case our
+model will become under fit so in this case we can use forward feed and backward
+feed.
+Therefore as per requirement we will you different preprocessing method to handle
+data.
+
+
+
+
+The third step of our method is to applying the various alogrithms for the given
+problem and choose the best algorithms which have highest accuracy.
+we have variuos algorithms in machine learning like svm, linear regression, knn
+arima(Autoregressive integrated moving average).
+but as per our requirement we need a system which have low latency and we are
+able to analys time series real data.
+for that purpose right now we are using svm, KNeighbors, random forest.
+for training the model we are using 75% of data and the rest 25% for testing
+purpose.
+
+and in the forth step we will plot the value and predicted result
+using graph.
+for plotting the graph the library we are usign is matplotlib
+
+
+
+
+
+
+
+
+TASK PERFORMED
+here we have taken the tesla data from yahoo finance
+and store the data into a csv file and we are usign
+the csv file to plot the graph.
+
+on y-axis we have ploted the price and on x-axis
+we have taken the time.
+the red one in upper part is the price of tesla share
+over a period of 20 year from 2000 to till now
+and the blue one is the moving average which we have calculate on adjance
+closed
+and below red part is the volume traded on a particular
+date.
+
+#Second graph
+
+Here we have plotted the graph in the for of candlestick.
+for better visualizalization. abusoly the y-axis represent the price
+and the x-axis represent the time and the below part is the volume
+traded on the particlar days
+
+So far we have collected 500 different stock price and we had applied the
+cleansing part on the data .
+
+
+By measuring the accuracy of the different algorithms, we found that the
+most suitable algorithm for predicting the market price of a stock based on
+various data points from the historical data is the random forest algorithm
+
+The algorithm will be a great asset for brokers and investors for investing
+money in the stock market
